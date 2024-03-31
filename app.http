@@ -4,41 +4,15 @@ POST http://localhost:3000/register
 Content-Type:application/json
 
 {
-  "username": "adam_richard1",
+  "username": "adam_richard",
   "name": "Adam Richard",
-  "password": "richard_5678",
+  "password": "richard_567",
   "gender": "male",
   "location": "Detroit"
 }
-
-###
-//scenario 2 password too short
-POST http://localhost:3000/register
-Content-Type:application/json
-
-{
-  "username": "adam_richard2",
-  "name": "Adam Richard",
-  "password": "rich",
-  "gender": "male",
-  "location": "Detroit"
-}
-
 ###
 
-//scenario 3 user created sucessfully
-POST http://localhost:3000/register
-Content-Type:application/json
 
-{
-  "username": "adam_richard3",
-  "name": "Adam Richard",
-  "password": "richard_56789",
-  "gender": "male",
-  "location": "Detroit"
-}
-
-###
 //POST login method API 2
 //scenario 1 "invalid user"
 POST http://localhost:3000/login
@@ -46,68 +20,20 @@ Content-Type:application/json
 
 {
   "username": "adam_richard",
-  "password": "richard_5678"
-}
-
-###
-
-//POST login method API 2
-//scenario 1 "invalid password"
-POST http://localhost:3000/login
-Content-Type:application/json
-
-{
-  "username": "adam_richard1",
   "password": "richard_567"
 }
 
-###
 
-//POST login method API 2
-//scenario 3 "Login sucesses!"
-POST http://localhost:3000/login
-Content-Type:application/json
-
-{
-  "username": "adam_richard3",
-  "password": "richard_56789"
-}
 
 ###
-
 //PUT method API 3 Update password
 //scenario1 "invalid current password"
 PUT http://localhost:3000/change-password
 Content-Type:application/json
 
 {
-  "username": "adam_richard1",
+  "username": "adam_richard",
   "oldPassword": "richard_567",
   "newPassword": "richard@123"
 }
-
-###
-//PUT method API 3 Update password
-//scenario2 "password too short"
-PUT http://localhost:3000/change-password
-Content-Type:application/json
-
-{
-  "username": "adam_richard3",
-  "oldPassword": "richard_56789",
-  "newPassword": "rich"
-}
-
-###
-//PUT method API 3 Update password
-//scenario2 "password too short"
-PUT http://localhost:3000/change-password
-Content-Type:application/json
-
-{
-  "username": "adam_richard3",
-  "oldPassword": "richard_56789",
-  "newPassword": "richard@123"
-}
-
 
